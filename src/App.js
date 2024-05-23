@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <div className="container">
-      {!isAuthenticated ? (
+      {isAuthenticated ? (
         <Dashboard/>
       ) : (
         <Login onLogin={handleLogin} />
