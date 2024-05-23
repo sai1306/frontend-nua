@@ -66,10 +66,12 @@ function Dashboard() {
   function fetchByAuthor(e) {
     if (e.key === 'Enter') {
       setAuthor(authorInput.current.value)
+      authorInput.current.value = ''
     }
   }
   function searchByAuthor(e){
     setAuthor(authorInput);
+    authorInput.current.value = ''
   }
   function downloadCSV(e) {
     const header = Object.keys(data[0]).join(',') + '\n';
